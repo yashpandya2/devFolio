@@ -1,0 +1,120 @@
+.contact {
+  background-color: #2c3531;
+  width: 100%;
+  height: 100vh;
+}
+
+.contactRightBar {
+  background-color: #d9b08c;
+  width: 30%;
+  height: inherit;
+  animation: contactFormTransition 0.5s linear forwards;
+  position: absolute;
+  right: 0;
+}
+
+.contactContainer {
+  width: 70%;
+  height: 80%;
+  background-color: white;
+  position: absolute;
+  border-radius: 70px 0 0 70px;
+  /* transform: translateX(20%) translateY(-50%); */
+  display: flex;
+  top: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+  justify-content: center;
+  animation: contactTransition 0.5s linear forwards;
+}
+
+.head {
+  /* background-color: aqua; */
+  height: 5vmax;
+  justify-content: center;
+}
+
+.contactContainerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  padding: 5%;
+}
+
+.contactContainerForm > h4 {
+  text-align: center;
+  margin: 1vmax;
+  color: #d9b08c;
+  text-shadow: -1px 1px 0 #2c3531, 1px 1px 0 #2c3531, 1px -1px 0 #2c3531,
+    -1px -1px 0 #2c3531;
+}
+
+.contactContainerForm > input,
+textarea {
+  padding: 1vmax;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 3px;
+  font-family: "Josefin Sans", sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.205);
+  transform: translateX(-100vw);
+  animation: contactFormInputs 0.5s ease-in-out forwards 0.5s;
+}
+
+.contactContainerForm > button {
+  background-color: #2c3531;
+  transform: translateY(-100vh);
+  animation: contactFormBtn 0.5s ease-in-out forwards 1s;
+}
+
+.contactContainerForm > button:hover {
+  background-color: #d9b08c;
+  color: black;
+}
+
+@keyframes contactTransition {
+  from {
+    transform: translateX(-100%) translateY(-50%);
+  }
+  to {
+    transform: translateX(20%) translateY(-50%);
+  }
+}
+@keyframes contactFormTransition {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes contactFormBtn {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes contactFormInputs {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.media {
+  align-items: center;
+  /* background-color: aquamarine; */
+  text-align: center;
+  height: 35vmax;
+  position: sticky;
+  width: 55vmax;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 900px) {
+  .media {
+    max-width: 25vmax;
+    min-height: 60vmax;
+  }
+}
